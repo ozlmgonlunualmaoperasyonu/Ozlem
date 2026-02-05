@@ -59,14 +59,14 @@ noBtn.addEventListener("click", () => {
   // Hayır butonunu her basmada küçült
   const currentWidth = noBtn.offsetWidth;
   const currentHeight = noBtn.offsetHeight;
-  noBtn.style.width = currentWidth * 0.9 + "px";  // %10 küçült
-  noBtn.style.height = currentHeight * 0.9 + "px";
+  noBtn.style.width = currentWidth * 0.85 + "px";  // %10 küçült
+  noBtn.style.height = currentHeight * 0.85 + "px";
 
   // Evet butonunu her basmada büyüt
   const evetWidth = yesBtn.offsetWidth;
   const evetHeight = yesBtn.offsetHeight;
-  yesBtn.style.width = evetWidth * 1.10 + "px";  // %26 büyüt
-  yesBtn.style.height = evetHeight * 1.10 + "px";
+  yesBtn.style.width = evetWidth * 1.5 + "px";  // %26 büyüt
+  yesBtn.style.height = evetHeight * 1.5 + "px";
 
   // 10 kere basınca Hayır butonunu gizle
   if (hayirSayac >= 10) {
