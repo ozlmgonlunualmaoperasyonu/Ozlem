@@ -65,8 +65,8 @@ noBtn.addEventListener("click", () => {
   // Evet butonunu her basmada büyüt
   const evetWidth = yesBtn.offsetWidth;
   const evetHeight = yesBtn.offsetHeight;
-  yesBtn.style.width = evetWidth * 1.02 + "px";  // 
-  yesBtn.style.height = evetHeight * 1.02 + "px";
+  yesBtn.style.width = evetWidth * 1.04 + "px";  // 
+  yesBtn.style.height = evetHeight * 1.04 + "px";
 
   // 10 kere basınca Hayır butonunu gizle
   if (hayirSayac >= 10) {
@@ -80,20 +80,13 @@ function showPhotos() {
 
   // Eğer daha önce fotoğraflar eklendiyse tekrar ekleme
   if (photoContainer.children.length > 0) return;
+  // Tek fotoğraf oluştur
+  const photo = document.createElement("img");
+  photo.src = "2.jpeg";
+  photo.alt = "Fotoğraf";
+  photo.className = "photo-item";
 
-  // İki fotoğraf oluştur
-  const photo1 = document.createElement("img");
-  photo1.src = "1.jpeg"; // Kullanıcı bu dosyaları ekleyecek
-  photo1.alt = "Fotoğraf 1";
-  photo1.className = "photo-item";
-
-  const photo2 = document.createElement("img");
-  photo2.src = "2.jpeg"; // Kullanıcı bu dosyaları ekleyecek
-  photo2.alt = "Fotoğraf 2";
-  photo2.className = "photo-item";
-
-  photoContainer.appendChild(photo1);
-  photoContainer.appendChild(photo2);
+  photoContainer.appendChild(photo);
 
   // Container'ı göster
   photoContainer.classList.add("show");
