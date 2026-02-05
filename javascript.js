@@ -97,6 +97,12 @@ function showPhotos() {
 
   // Container'ı göster
   photoContainer.classList.add("show");
+
+  // Ana fotoğrafı (3.jpeg) gizle
+  const mainPhoto = document.querySelector(".pixel-cat");
+  if (mainPhoto) {
+    mainPhoto.style.display = "none";
+  }
 }
 
 
